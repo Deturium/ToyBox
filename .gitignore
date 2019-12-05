@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+
+# personal configure
+yarn.lock
+package-lock.json
+
+/dist
+/public
+.umi
