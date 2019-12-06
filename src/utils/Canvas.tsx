@@ -1,14 +1,16 @@
 import React from 'react'
 
-const P: React.FC<{
-  init: (container: HTMLDivElement) => void
-}> = ({ children, init }) => {
+export type InitFn = (container: HTMLDivElement) => void
+
+const Canvas: React.FC<{
+  initFn: InitFn
+}> = ({ children, initFn }) => {
 
   const container = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
-    init(container.current)
-  })
+    initFn(container.current)
+  }, [])
 
   return (
     <div ref={container}>
@@ -17,4 +19,4 @@ const P: React.FC<{
   )
 }
 
-export default P
+export default Canvas
