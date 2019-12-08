@@ -1,9 +1,9 @@
 import React from 'react'
 import Canvas, { InitFn } from '../utils/Canvas'
 
-const initFn: InitFn = (container) => {
+const initFn: InitFn = (_, container) => {
 
-  container.innerHTML = 'Hello world'
+  container.innerHTML = 'Hello, Bézier curve.'
 }
 
 export default () => (

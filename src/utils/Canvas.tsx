@@ -1,20 +1,26 @@
 import React from 'react'
 
-export type InitFn = (container: HTMLDivElement) => void
+export type InitFn = (
+  canvas: HTMLCanvasElement,
+  container: HTMLDivElement,
+) => void
 
 const Canvas: React.FC<{
   initFn: InitFn
 }> = ({ children, initFn }) => {
 
-  const container = React.useRef<HTMLDivElement>(null)
+  const containerRef = React.useRef<HTMLDivElement>(null)
+  const canvasRef = React.useRef<HTMLCanvasElement>(null)
 
-  React.useEffect(() => {
-    initFn(container.current)
+  React.useLayoutEffect(() => {
+    initFn(canvasRef.current, containerRef.current)
   }, [])
 
   return (
-    <div ref={container}>
-      {children}
+    <div ref={containerRef}>
+      <canvas ref={canvasRef}>
+        {children}
+      </canvas>
     </div>
   )
 }

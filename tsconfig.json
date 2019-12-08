@@ -8,5 +8,6 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
   },
 }
