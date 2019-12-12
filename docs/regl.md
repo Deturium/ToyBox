@@ -15,9 +15,9 @@ order: 100
 
 ## 先画个三角形压压惊
 
-<code src="./webgl/triangle.tsx" />
+<code src="../src/webgl/triangle.tsx" />
 
 
 ## 然后画些能动的弹幕
 
-<code src="./webgl/datum.tsx" />
+<code src="../src/webgl/datum.tsx" />
