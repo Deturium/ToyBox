@@ -1,5 +1,5 @@
 export default {
-  mode: 'site',
+  // mode: 'site',
 
   title: "ToyBox",
   description: "小氢气 の 玩具屋",
